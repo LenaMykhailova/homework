@@ -10,10 +10,80 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(117, 219, 147);
+}
 
+.wrapper.happy {
+    background-image: url('./Happy.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper.happy .out, .wrapper.sad .out{
+    color: #fff;
+}
+
+.wrapper.sad {
+    background-image: url('./sad.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .out {
     font-size: 2rem;
     font-weight: 700;
+    text-decoration: none;
+    color: rgb(78, 98, 216);
+}
+
+.pop-up {
+    width: 250px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: absolute;
+    display: none;
+}
+
+.pop-up.active {
+    display: flex;
+}
+
+.pop-up p {
+    font-size: 25px;
+}
+
+.pop-up button {
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(83, 83, 83);
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.pop-up .btn_yes:hover {
+    background-color: rgb(54, 172, 30);
+}
+
+.pop-up .btn_no:hover {
+    background-color: rgb(201, 44, 44);
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.514);
+    display: none;
+}
+
+.background.active{
+    display: block;
 }
